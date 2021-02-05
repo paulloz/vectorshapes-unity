@@ -441,6 +441,8 @@ namespace VectorShapesInternal
 				else
 					fillMaterial = null;
 			}
+			else if (fillMaterial != null && sourceFillMaterial != null)
+				fillMaterial.CopyPropertiesFromMaterial(sourceFillMaterial);
 
 			if (strokeMaterial == null || strokeMaterial.shader != sourceStrokeMaterial.shader)
 			{
